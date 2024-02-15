@@ -56,7 +56,12 @@ namespace MyApp
              * doesn't mistake it for the end of the string
              */
             Console.WriteLine("First age is " + firstAge);
-            Console.WriteLine("First age is " + secondAge);
+            Console.WriteLine("Second age is " + secondAge);
+
+            double averageAge = CalculateAverageAge(firstAge, secondAge);
+
+            Console.WriteLine("Average age is " + averageAge);
+
         }
 
 
@@ -69,6 +74,15 @@ namespace MyApp
 
             return age;
 
+        }
+
+        static double CalculateAverageAge(int firstAge, int secondAge )
+        {
+            double averageAge;
+
+            averageAge = ((double)firstAge + (double)secondAge) / 2;
+
+            return averageAge;
         }
 
     }
